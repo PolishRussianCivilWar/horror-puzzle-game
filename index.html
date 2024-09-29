@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Puzzle</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            font-family: Arial, sans-serif;
+            transition: all 0.5s ease;
+        }
+        .hidden-message {
+            color: #f0f8ff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .code-box {
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 10px;
+            font-size: 1.4em;
+        }
+        /* Change style after solving the puzzle */
+        .solved {
+            background-color: #1a1a1a;
+            color: #e1e1e1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Happy Puzzle!</h1>
+    <p>Everything is fine here! Try to solve this <span class="hidden-message">puzzle</span> if you'd like!</p>
+    
+    <div class="code-box">
+        <label for="code">Enter the code: </label>
+        <input type="text" id="code" placeholder="4 digits">
+        <button onclick="checkCode()">Submit</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // Puzzle secret code
+        const correctCode = '1234';
+
+        // Reveal hidden message when clicked
+        document.querySelector('.hidden-message').addEventListener('click', function() {
+            this.textContent = "Wait... is that a number 1?";
+            this.style.color = '#ff0000'; // make it look unsettling
+        });
+
+        // Check if the code is correct
+        function checkCode() {
+            const userCode = document.getElementById('code').value;
+            const result = document.getElementById('result');
+
+            if (userCode === correctCode) {
+                result.textContent = "Correct! The door opens...";
+                document.body.classList.add('solved'); // transition to darker mode
+            } else {
+                result.textContent = "Wrong code! Something feels... off.";
+                result.style.color = '#ff0000';
+            }
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Puzzle</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            font-family: Arial, sans-serif;
+            transition: all 0.5s ease;
+        }
+        .hidden-message {
+            color: #f0f8ff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .code-box {
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 10px;
+            font-size: 1.4em;
+        }
+        /* Change style after solving the puzzle */
+        .solved {
+            background-color: #1a1a1a;
+            color: #e1e1e1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Happy Puzzle!</h1>
+    <p>Everything is fine here! Try to solve this <span class="hidden-message">puzzle</span> if you'd like!</p>
+    
+    <div class="code-box">
+        <label for="code">Enter the code: </label>
+        <input type="text" id="code" placeholder="4 digits">
+        <button onclick="checkCode()">Submit</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // Puzzle secret code
+        const correctCode = '1234';
+
+        // Reveal hidden message when clicked
+        document.querySelector('.hidden-message').addEventListener('click', function() {
+            this.textContent = "Wait... is that a number 1?";
+            this.style.color = '#ff0000'; // make it look unsettling
+        });
+
+        // Check if the code is correct
+        function checkCode() {
+            const userCode = document.getElementById('code').value;
+            const result = document.getElementById('result');
+
+            if (userCode === correctCode) {
+                result.textContent = "Correct! The door opens...";
+                document.body.classList.add('solved'); // transition to darker mode
+            } else {
+                result.textContent = "Wrong code! Something feels... off.";
+                result.style.color = '#ff0000';
+            }
+        }
+    </script>
+</body>
+</html>
